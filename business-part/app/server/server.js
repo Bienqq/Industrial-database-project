@@ -5,12 +5,15 @@ const path = require('path');
 module.exports = class BusinessServer {
     constructor(port) {
         this.app = express()
-        
+
         // directory with html, styles, scripts
         this.app.use(express.static(__dirname + "\\..\\public"))
-        
         //directory with views
-        this.viewsPath = path.resolve(__dirname + "\\..\\public\\views\\")
+        this.viewsPath = path.resolve(__dirname + "\\..\\public\\views")
+        //including extra JavaScript files
+        
+        this.app.use(express.static(__dirname + "/../../node_modules"))
+        //this.app.use(express.static())
 
         this.app.listen(port);
     }

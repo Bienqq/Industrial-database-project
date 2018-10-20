@@ -8,7 +8,7 @@ dns.lookup(os.hostname(), (error, address, fam) => {
     console.log("Hostname : " + os.hostname())
     console.log('IP : ' + address);
     const serverAddress = `http://${address}:${PORT}`
-    console.log(`Server is listening at ${serverAddress}`)
+    console.log(`Server is listening at : ${serverAddress}`)
     const server = new BusinessServer(PORT)
     server.init()
 })
