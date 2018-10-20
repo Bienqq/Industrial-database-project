@@ -1,7 +1,7 @@
 {
   "name": "app",
   "version": "0.0.1",
-  "description": "Business part of the project",
+  "description": "Business part of the industrial database project",
   "main": "app.js",
   "scripts": {
     "start": "node app/app.js",
