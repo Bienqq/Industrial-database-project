@@ -10,4 +10,5 @@ dns.lookup(os.hostname(), (error, address, fam) => {
     const serverAddress = `http://${address}:${PORT}`
     console.log(`Server is listening at ${serverAddress}`)
     const server = new BusinessServer(PORT)
+    server.init()
 })
