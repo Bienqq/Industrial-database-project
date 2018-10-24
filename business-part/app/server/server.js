@@ -8,12 +8,12 @@ module.exports = class BusinessServer {
 
         // directory with html, styles, scripts
         this.app.use(express.static(__dirname + "\\..\\public"))
+        
         //directory with views
         this.viewsPath = path.resolve(__dirname + "\\..\\public\\views")
        
-        //including extra JavaScript files: Bootstrap, jQuery, Popper, Vue etc.
+        //including Bootstrap, jQuery, Popper, Vue etc.
         this.app.use(express.static(__dirname + "/../../node_modules"))
-
         this.app.listen(port);
     }
 
