@@ -1,20 +1,25 @@
 <template>
   <div id="app">
     <NavBar></NavBar>
+    <SideBar>Home</SideBar>
+    <Footer></Footer>
   </div>
 </template>
 
 <script>
-import NavBar from './components/NavBar.vue'
+import NavBar from "./components/NavBar.vue";
+import SideBar from "./components/SideBar.vue";
+import Footer from "./components/Footer";
 
 export default {
-  name: 'app',
+  name: "app",
   components: {
-    NavBar
+    NavBar,
+    SideBar,
+    Footer
   }
-}
+};
 </script>
 
 <style>
-
 </style>
