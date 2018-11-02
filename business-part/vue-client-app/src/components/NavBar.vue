@@ -17,7 +17,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
 .navbar-brand {
-  z-index: 10000;
+  z-index: 100000;
   margin-left: 60px;
 }
 </style>

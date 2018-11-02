@@ -1,10 +1,12 @@
 <template>
   <div>
     <Slide width="260">
-      <a id="home" href="#"><span>Dashboard</span></a>
-      <a id="home" href="#"><span>Charts</span></a>
-      <a id="home" href="#"><span>Database</span></a>
-      <a id="home" href="#"><span>Settings</span></a>
+      <a id="home" href="#"><img src="https://png.icons8.com/wired/32/ffffff/dashboard.png"><span>
+          Dashboard</span></a>
+      <a id="home" href="#"><img src="https://png.icons8.com/ios/32/ffffff/combo-chart.png"><span>Charts</span></a>
+      <a id="home" href="#"><img src="https://png.icons8.com/ios/32/ffffff/database.png"><span>Database</span></a>
+      <hr>
+      <a id="home" href="#"><img src="https://png.icons8.com/ios/32/ffffff/services.png"><span>Settings</span></a>
 
     </Slide>
 
@@ -23,6 +25,9 @@ export default {
 </script>
 
 <style>
+a {
+  text-decoration: none;
+}
 .bm-burger-button {
   position: fixed;
   width: 36px;
@@ -55,5 +60,23 @@ export default {
 }
 .bm-overlay {
   background: white;
+}
+
+.bm-item-list > * {
+  display: flex;
+  padding: 0.7em;
+}
+
+a {
+  text-decoration: none !important;
+  transition: 0.2s all ease-in-out;
+}
+
+a:hover span {
+  color: rgb(49, 49, 49);
+}
+
+a:hover img {
+  filter: invert(80%);
 }
 </style>
