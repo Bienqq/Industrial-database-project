@@ -3,7 +3,6 @@
     <NavBar></NavBar>
     <Background></Background>
     <SideBar>Home</SideBar>
-
     <Footer></Footer>
   </div>
 </template>

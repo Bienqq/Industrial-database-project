@@ -8,6 +8,7 @@ import {
   Button,
   Layout
 } from 'bootstrap-vue/es/components'
+import router from "./router"
 
 
 Vue.use(Layout);
@@ -20,5 +21,6 @@ Vue.use(Button)
 Vue.config.productionTip = false
 
 new Vue({
+  router,
   render: h => h(App)
 }).$mount('#app')

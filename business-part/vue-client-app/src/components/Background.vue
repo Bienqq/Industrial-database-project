@@ -1,5 +1,5 @@
 <template>
-  <div></div>
+  <div class="bg-image"></div>
 </template>
 
 <script>
@@ -8,6 +8,10 @@ export default {
 };
 </script>
 
-
-<style >
+<style>
+.bg-image {
+  background-image: url("../assets/img/vue-logo.png");
+  max-width: 100% !important;
+  height: auto !important;
+}
 </style>
