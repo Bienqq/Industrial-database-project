@@ -1,13 +1,13 @@
 <template>
   <div>
-    <Slide width="260">
-      <a id="home" href="#"><img src="https://png.icons8.com/wired/32/ffffff/dashboard.png"><span>
+    <Slide isOpen width="260">
+      <img class="my-div" src="../assets/img/bussiness.png" alt="">
+      <a id="home" href="#"><img src="../assets/img/dashboard.png"><span>
           Dashboard</span></a>
-      <a id="home" href="#"><img src="https://png.icons8.com/ios/32/ffffff/combo-chart.png"><span>Charts</span></a>
-      <a id="home" href="#"><img src="https://png.icons8.com/ios/32/ffffff/database.png"><span>Database</span></a>
-      <hr>
-      <a id="home" href="#"><img src="https://png.icons8.com/ios/32/ffffff/services.png"><span>Settings</span></a>
-
+      <a id="home" href="#"><img src="../assets/img/combo-chart.png"><span>Charts</span></a>
+      <a id="home" href="#"><img src="../assets/img/database.png"><span>Database</span></a>
+      <hr class="custom-hr">
+      <a id="home" href="#"><img src="../assets/img/services.png"><span>Settings</span></a>
     </Slide>
 
   </div>
@@ -25,6 +25,16 @@ export default {
 </script>
 
 <style>
+.my-div {
+  position: relative;
+  left: 0px;
+  top: -45px;
+  width: 30px;
+  height: 30px;
+  background-image: url("../assets/img/bussiness.png");
+  filter: invert(100%);
+}
+
 a {
   text-decoration: none;
 }
@@ -47,7 +57,13 @@ a {
   z-index: 1000; /* Stay on top */
   top: 0;
   left: 0;
-  background-color: #0691a7; /* Black*/
+  background: linear-gradient(
+    0deg,
+    rgba(23, 167, 189, 1) 0%,
+    rgba(23, 167, 189, 1) 21%,
+    rgba(0, 128, 128, 1) 100%
+  ); /* w3c */
+
   overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 60px; /* Place content 60px from the top */
   transition: 0.5s; /*0.5 second transition effect to slide in the sidenav*/
@@ -69,14 +85,27 @@ a {
 
 a {
   text-decoration: none !important;
-  transition: 0.2s all ease-in-out;
 }
 
 a:hover span {
   color: rgb(49, 49, 49);
+  transition: 0.2s all ease-in-out;
 }
 
 a:hover img {
-  filter: invert(80%);
+  filter: invert(90%);
+  transition: 0.2s all ease-in-out;
+}
+
+.cross-style {
+  cursor: pointer;
+  position: absolute;
+  right: -10px;
+  top: 6px;
+}
+
+.custom-hr {
+  border-top: 1px solid #ffffff !important;
+  margin-right: 20px !important;
 }
 </style>

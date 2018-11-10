@@ -10,13 +10,13 @@
             <li class="list-inline-item"><a href="#"><i class="fa fa-twitter"></i></a></li>
             <li class="list-inline-item"><a href="#"><i class="fa fa-instagram"></i></a></li>
             <li class="list-inline-item"><a href="#"><i class="fa fa-google-plus"></i></a></li>
-            <li class="list-inline-item"><a href="#" target="_blank"><i class="fa fa-envelope"></i></a></li>
+            <li class="list-inline-item"><a href="#"><i class="fa fa-envelope"></i></a></li>
           </ul>
         </div>
       </div>
       <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 text-center text-white">
-          <p class="h6">Industrial Database Project Ⓒ All right Reversed.</p>
+          <p class="h6">Industrial Database Project Ⓒ All right Reversed</p>
         </div>
       </div>
     </div>
@@ -25,17 +25,23 @@
 </template>
 
 <script>
+// TODO zmienic komponenty na gradientowe
 export default {
   name: "Footer"
 };
 </script>
-
+ 
 <style  >
 /* Footer */
 @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
 
 #footer {
-  background: #17a2b8 !important;
+  background: linear-gradient(
+    180deg,
+    rgba(23, 167, 189, 1) 0%,
+    rgba(23, 167, 189, 1) 21%,
+    rgba(0, 128, 128, 1) 100%
+  ) !important; /* w3c */
 }
 
 #footer ul.social li a i {

@@ -14,6 +14,9 @@ Vue.use(Layout);
 Vue.use(Navbar)
 Vue.use(FormInput)
 Vue.use(Button)
+
+
+
 Vue.config.productionTip = false
 
 new Vue({
