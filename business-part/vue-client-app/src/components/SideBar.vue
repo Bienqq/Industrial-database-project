@@ -44,6 +44,7 @@ a {
   left: 18px;
   top: 12px;
   cursor: pointer;
+  z-index: 930;
 }
 .bm-burger-bars {
   background-color: #373a47;

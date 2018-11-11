@@ -1,18 +1,22 @@
 <template>
   <transition name="fade">
     <div class="container">
-      <Widgets class=mt-4></Widgets>
+      <div class="card small">
+        <Barchart></Barchart>
+        <router-view></router-view>
+
+      </div>
     </div>
   </transition>
 </template>
 
 <script>
-import Widgets from "./Widgets";
+import Barchart from "./Barchart";
 
 export default {
-  name: "Dashboard",
+  name: "Charts",
   components: {
-    Widgets
+    Barchart
   }
 };
 </script>
@@ -31,5 +35,10 @@ export default {
 .fade-enter,
 .fade-leave-active {
   opacity: 0;
+}
+
+.small {
+  max-width: 600px;
+  margin: 50px auto;
 }
 </style>

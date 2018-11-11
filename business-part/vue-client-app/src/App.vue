@@ -1,9 +1,9 @@
 <template>
   <div id="app">
-    <NavBar></NavBar>
 
+    <NavBar></NavBar>
     <SideBar>Home</SideBar>
-    <Footer></Footer>
+
   </div>
 </template>
 
