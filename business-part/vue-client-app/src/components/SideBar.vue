@@ -1,7 +1,7 @@
 <template>
   <div>
     <Slide isOpen width="260">
-      <img class="my-div" src="../assets/img/bussiness.png" alt="">
+      <img class="bussines-image" src="../assets/img/bussiness.png" alt="">
       <router-link to="/"><img src="../assets/img/dashboard.png"><span>Dashboard</span></router-link>
       <router-link to="/charts"> <img src="../assets/img/combo-chart.png"><span>Charts</span></router-link>
       <router-link to="/database"> <img src="../assets/img/database.png"><span>Database</span></router-link>
@@ -24,10 +24,10 @@ export default {
 </script>
 
 <style>
-.my-div {
+.bussines-image {
   position: relative;
   left: 0px;
-  top: -45px;
+  top: -50px;
   width: 30px;
   height: 30px;
   background-image: url("../assets/img/bussiness.png");

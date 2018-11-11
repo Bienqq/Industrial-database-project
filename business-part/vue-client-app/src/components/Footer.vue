@@ -35,6 +35,10 @@ export default {
 /* Footer */
 @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
 
+#footer ul {
+  margin-bottom: 5px;
+}
+
 #footer {
   background: linear-gradient(
     180deg,

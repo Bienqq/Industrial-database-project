@@ -2,7 +2,7 @@
 
   <b-navbar toggleable="sm" type="dark" variant="info">
 
-    <b-navbar-brand href="#">Business Center</b-navbar-brand>
+    <b-navbar-brand class="fixed-top" href="#">Business Center</b-navbar-brand>
 
     <!-- Right aligned nav items -->
     <!-- Hided on medium lower -->
@@ -44,11 +44,14 @@ export default {
 <style>
 .navbar-brand {
   z-index: 100000;
-  margin-left: 60px;
+  margin-left: 70px;
   font-weight: 700;
-  font-size: 22px !important;
+  padding-top: 0.3em !important;
+  font-size: 24px !important;
+  text-shadow: rgba(0, 0, 0, 1) 0 0 2px;
 }
 .navbar {
+  min-height: 56px;
   background: linear-gradient(
     180deg,
     rgba(23, 167, 189, 1) 0%,

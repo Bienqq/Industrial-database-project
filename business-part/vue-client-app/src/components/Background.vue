@@ -12,6 +12,6 @@ export default {
 .bg-image {
   background-image: url("../assets/img/vue-logo.png");
   max-width: 100% !important;
-  height: auto !important;
+  height: 2000px;
 }
 </style>
