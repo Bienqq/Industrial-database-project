@@ -21,11 +21,9 @@
       </div>
     </div>
   </section>
-  <!-- ./Footer -->
 </template>
 
 <script>
-// TODO zmienic komponenty na gradientowe
 export default {
   name: "Footer"
 };

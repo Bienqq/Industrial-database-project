@@ -6,7 +6,10 @@ import {
   Navbar,
   FormInput,
   Button,
-  Layout
+  Layout,
+  Progress,
+  Card,
+  Link
 } from 'bootstrap-vue/es/components'
 import router from "./router"
 
@@ -15,6 +18,10 @@ Vue.use(Layout);
 Vue.use(Navbar)
 Vue.use(FormInput)
 Vue.use(Button)
+Vue.use(Progress)
+Vue.use(Card)
+Vue.use(Link)
+
 
 
 

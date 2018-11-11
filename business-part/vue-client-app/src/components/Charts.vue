@@ -1,8 +1,10 @@
 <template>
-    <div>
-        <h1>Charts Here</h1>
-        <router-view></router-view>
-    </div>
+  <div class="mt-5">
+
+    <router-view></router-view>
+
+  </div>
+
 </template>
 
 <script>
