@@ -3,18 +3,30 @@
   <b-navbar toggleable="sm" type="dark" variant="info">
 
     <b-navbar-brand class="fixed-top" href="#">Business Center</b-navbar-brand>
-
+    <div class="right">
+      <Clock></Clock>
+    </div>
   </b-navbar>
 
 </template>
 
 <script>
+import Clock from "./Clock";
+
 export default {
-  name: "NavBar"
+  name: "NavBar",
+  components: {
+    Clock
+  }
 };
 </script>
 
 <style>
+.right {
+  position: fixed;
+  right: 0;
+}
+
 .navbar-brand {
   z-index: 100000;
   margin-left: 70px;
