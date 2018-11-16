@@ -4,7 +4,10 @@ const os = require("os");
 const postgres = require("pg");
 
 const PORT = 8090;
-const connectionString = "postgres://postgres:admin@localhost:5432/BBD";
+const BBD = "postgres://postgres:admin@localhost:5432/BBD";
+const PBD = "postgres://postgres:admin@localhost:5432/mydb";
+
+//const pbdString = "postgres://admin:admin@192.168.137.1:5432/mydb";
 
 // starting application
 dns.lookup(os.hostname(), (error, address, fam) => {
@@ -15,9 +18,9 @@ dns.lookup(os.hostname(), (error, address, fam) => {
   console.log(`Server is listening at : ${serverAddress}/index`);
   const server = new BusinessServer(PORT);
   server.init();
-  const databaseClient = new postgres.Client(connectionString);
-  databaseClient
-    .connect()
-    .then(console.log("Connected with business database"))
-    .catch("Error during connecting with database");
+  const businesDatabaseClient = new postgres.Client(BBD);
+  businesDatabaseClient.connect()
+  
+  const industrialDatabaseclient = new postgres.Client(PBD);
+  industrialDatabaseclient.connect()
 });
