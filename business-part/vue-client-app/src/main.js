@@ -9,7 +9,10 @@ import {
   Layout,
   Progress,
   Card,
-  Link
+  Link,
+  Table,
+  Pagination,
+  Badge
 } from 'bootstrap-vue/es/components'
 import router from "./router"
 
@@ -21,9 +24,9 @@ Vue.use(Button)
 Vue.use(Progress)
 Vue.use(Card)
 Vue.use(Link)
-
-
-
+Vue.use(Table)
+Vue.use(Pagination)
+Vue.use(Badge)
 
 Vue.config.productionTip = false
 

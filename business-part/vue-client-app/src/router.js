@@ -2,7 +2,7 @@ import Vue from "vue"
 import VueRouter from "vue-router"
 import Dashboard from "./components/Dashboard"
 import Charts from "./components/charts/Charts"
-import Database from "./components/Database"
+import Database from "./components/tables/Database"
 import Settings from "./components/Settings"
 
 
