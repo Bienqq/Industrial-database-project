@@ -51,10 +51,10 @@ a {
 }
 
 .bm-menu {
-  height: 100%; /* 100% Full-height */
-  width: 0; /* 0 width - change this with JavaScript */
-  position: fixed; /* Stay in place */
-  z-index: 1000; /* Stay on top */
+  height: 100%; 
+  width: 0; 
+  position: fixed; 
+  z-index: 1000; 
   top: 0;
   left: 0;
   background: linear-gradient(
@@ -62,11 +62,11 @@ a {
     rgba(23, 167, 189, 1) 0%,
     rgba(23, 167, 189, 1) 21%,
     rgba(0, 128, 128, 1) 100%
-  ); /* w3c */
+  ); 
 
-  overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 60px; /* Place content 60px from the top */
-  transition: 0.5s; /*0.5 second transition effect to slide in the sidenav*/
+  overflow-x: hidden; 
+  padding-top: 60px; 
+  transition: 0.5s; 
 }
 
 .bm-item-list {

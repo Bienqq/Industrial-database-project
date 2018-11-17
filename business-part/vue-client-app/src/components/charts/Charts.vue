@@ -49,9 +49,9 @@ export default {
         datasets: [
           {
             label: "Data One",
-            borderColor: "blue",
+            borderColor: "red",
             type: "line",
-            backgroundColor: "rgba(88,79,79,0.5)",
+            backgroundColor: "rgba(246, 74, 72, 0.7)",
             borderWidth: 2,
             data: [
               this.getRandomInt(),
@@ -67,8 +67,8 @@ export default {
           },
           {
             label: "Data Two",
-            borderColor: "red",
-            backgroundColor: "rgba(11,22,33,0.5)",
+            borderColor: "green",
+            backgroundColor: "rgba(68, 158, 72, 0.8)",
             borderWidth: 2,
             data: [
               this.getRandomInt(),
