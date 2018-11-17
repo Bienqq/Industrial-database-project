@@ -6,8 +6,8 @@
           <Barchart></Barchart>
         </div>
         <div class="col-md-6 card small">
-          <Linechart :chart-data="datacollection"></Linechart>
-          <button @click="fillData()">Randomize</button>
+          <Linechart v-bind:chart-data="datacollection"></Linechart>
+          <button v-on:click="fillData()">Randomize</button>
         </div>
         <router-view></router-view>
       </div>

@@ -1,7 +1,7 @@
 <template>
   <div>
     <Slide isOpen width="260">
-      <img class="bussines-image" src="../assets/img/bussiness.png" alt="">
+      <span class="bussines-image"  />
       <router-link to="/"><img src="../assets/img/dashboard.png"><span>Dashboard</span></router-link>
       <router-link to="/charts"> <img src="../assets/img/combo-chart.png"><span>Charts</span></router-link>
       <router-link to="/database"> <img src="../assets/img/database.png"><span>Database</span></router-link>
@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import { Slide } from "vue-burger-menu"; // import the CSS transitions you wish to use, in this case we are using `Slide`
+import { Slide } from "vue-burger-menu";
 
 export default {
   name: "SlideBar",
