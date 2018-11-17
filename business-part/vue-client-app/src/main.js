@@ -12,10 +12,10 @@ import {
   Link,
   Table,
   Pagination,
-  Badge
+  Badge,
+  Modal
 } from 'bootstrap-vue/es/components'
 import router from "./router"
-
 
 Vue.use(Layout);
 Vue.use(Navbar)
@@ -27,6 +27,7 @@ Vue.use(Link)
 Vue.use(Table)
 Vue.use(Pagination)
 Vue.use(Badge)
+Vue.use(Modal)
 
 Vue.config.productionTip = false
 

@@ -3,11 +3,24 @@
     <div class="container">
       <div class="row">
         <div class="col-md-6 card small">
-          <Barchart></Barchart>
+          <Barchart class="pointer" v-b-modal.modal-barchart></Barchart>
+
+          <!-- Modal view only -->
+          <b-modal id="modal-barchart" centered hide-footer size="lg">
+            <Barchart></Barchart>
+          </b-modal>
+
         </div>
+
         <div class="col-md-6 card small">
-          <Linechart v-bind:chart-data="datacollection"></Linechart>
+          <Linechart class="pointer" v-b-modal.modal-linechart v-bind:chart-data="datacollection"></Linechart>
           <button v-on:click="fillData()">Randomize</button>
+          
+          <!-- Modal view only -->
+          <b-modal id="modal-linechart" centered hide-footer size="lg">
+            <Linechart v-bind:chart-data="datacollection"></Linechart>
+          </b-modal>
+
         </div>
         <router-view></router-view>
       </div>
@@ -68,7 +81,7 @@ export default {
           {
             label: "Data Two",
             borderColor: "green",
-            backgroundColor: "rgba(68, 158, 72, 0.8)",
+            backgroundColor: "rgba(68, 158, 72, 0.7)",
             borderWidth: 2,
             data: [
               this.getRandomInt(),
@@ -97,5 +110,8 @@ export default {
   max-width: 500px;
   margin: 25px auto;
   box-shadow: 0 0 6px 0.5px rgba(0, 0, 0, 0.4);
+}
+.pointer {
+  cursor: pointer;
 }
 </style>
