@@ -6,7 +6,7 @@
           <Barchart class="pointer" v-b-modal.modal-barchart></Barchart>
 
           <!-- Modal view only -->
-          <b-modal id="modal-barchart" centered hide-footer size="lg">
+          <b-modal id="modal-barchart" centered hide-footer size="md">
             <Barchart></Barchart>
           </b-modal>
 
@@ -14,10 +14,10 @@
 
         <div class="col-md-6 card small">
           <Linechart class="pointer" v-b-modal.modal-linechart v-bind:chart-data="datacollection"></Linechart>
-          <button v-on:click="fillData()">Randomize</button>
+          <button class="pointer" v-on:click="fillData()">Randomize</button>
           
           <!-- Modal view only -->
-          <b-modal id="modal-linechart" centered hide-footer size="lg">
+          <b-modal id="modal-linechart" centered hide-footer size="md">
             <Linechart v-bind:chart-data="datacollection"></Linechart>
           </b-modal>
 
@@ -110,7 +110,13 @@ export default {
   max-width: 500px;
   margin: 25px auto;
   box-shadow: 0 0 6px 0.5px rgba(0, 0, 0, 0.4);
+  transition: box-shadow ease-out .3s;
 }
+
+.small:hover{
+   box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.4);
+}
+
 .pointer {
   cursor: pointer;
 }

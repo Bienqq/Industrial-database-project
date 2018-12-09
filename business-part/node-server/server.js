@@ -1,17 +1,26 @@
 const dns = require("dns");
 const os = require("os");
-const app = require("./server/app")
-const PORT = 8090;
+const app = require("./app")
 
-//const pbdString = "postgres://admin:admin@192.168.137.1:5432/mydb";
 
-// starting application
+
+
+  
+
+const port = process.env.SERVER_PORT || 8090;
+
 dns.lookup(os.hostname(), (error, address, fam) => {
-  app.listen(PORT, () => {
+  app.listen(port, () => {
     console.log("-------------------APLICATION STARTED--------------------");
     console.log("Hostname : " + os.hostname());
     console.log("IP : " + address);
-    const serverAddress = `http://${address}:${PORT}`;
+    const serverAddress = `http://${address}:${port}`;
     console.log(`Server is listening at : ${serverAddress}`);
+
+ 
+
   })
+
+
+
 });
