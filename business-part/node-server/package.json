@@ -25,6 +25,7 @@
   "dependencies": {
     "dns": "^0.2.2",
     "express": "^4.16.4",
+    "moment": "^2.22.2",
     "morgan": "^1.9.1",
     "node-cron": "^2.0.3",
     "os": "^0.1.1",

@@ -2,11 +2,6 @@ const dns = require("dns");
 const os = require("os");
 const app = require("./app")
 
-
-
-
-  
-
 const port = process.env.SERVER_PORT || 8090;
 
 dns.lookup(os.hostname(), (error, address, fam) => {
@@ -16,11 +11,5 @@ dns.lookup(os.hostname(), (error, address, fam) => {
     console.log("IP : " + address);
     const serverAddress = `http://${address}:${port}`;
     console.log(`Server is listening at : ${serverAddress}`);
-
- 
-
   })
-
-
-
 });

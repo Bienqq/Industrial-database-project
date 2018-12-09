@@ -16,6 +16,7 @@ import {
   Modal
 } from 'bootstrap-vue/es/components'
 import router from "./router"
+import Toasted from "vue-toasted"
 
 Vue.use(Layout);
 Vue.use(Navbar)
@@ -28,6 +29,7 @@ Vue.use(Table)
 Vue.use(Pagination)
 Vue.use(Badge)
 Vue.use(Modal)
+Vue.use(Toasted)
 
 Vue.config.productionTip = false
 

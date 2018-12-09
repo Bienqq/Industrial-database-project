@@ -19,11 +19,11 @@ async function getBusinessResults(uniqueElements, result) {
 
         [...filtered].forEach(el => {
             t1wy += el.t1wy
-            t2wy += el.t1wy
-            t1we += el.t2we
+            t2wy += el.t2wy
+            t1we += el.t1we
             t2we += el.t2we
             v1 += el.v1
-            v2 += el.v1
+            v2 += el.v2
         })
 
         t1wy /= filtered.length
@@ -45,7 +45,6 @@ async function getBusinessResults(uniqueElements, result) {
     }
     return businessResults
 }
-
 
 async function updateBusinessDatabase() {
     const lastId = await db.query(`SELECT last_value FROM ${INDSUTRIAL_DB_SEQ_NAME}`, {

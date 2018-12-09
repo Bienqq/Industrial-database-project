@@ -1,28 +1,68 @@
 <template>
   <div>
     <b-row>
-      <b-col sm="6" lg="3" class="p-1">
+      <b-col
+        sm="6"
+        lg="3"
+        class="p-1"
+      >
         <b-card class="text-white bg-primary card water">
-          <div class="h4 m-0 ">Water</div>
-          <b-progress height={} class="progress-xs my-3" variant="primary" animated v-bind:value="water" />
+          <div class="h4 m-0 ">Water <span>Last week: {{ totalWater }}</span></div>
+          <b-progress
+            height={}
+            class="progress-xs my-3"
+            variant="primary"
+            animated
+            v-bind:value="water"
+          />
         </b-card>
       </b-col>
-      <b-col sm="6" lg="3" class="p-1">
+      <b-col
+        sm="6"
+        lg="3"
+        class="p-1"
+      >
         <b-card class="text-white bg-warning card power ">
-          <div class="h4 m-0">Power </div>
-          <b-progress height={} class=" progress-xs my-3" variant="warning" animated v-bind:value="power" />
+          <div class="h4 m-0">Power <span>Last week: {{ totalPower }} </span> </div>
+          <b-progress
+            height={}
+            class=" progress-xs my-3"
+            variant="warning"
+            animated
+            v-bind:value="power"
+          />
         </b-card>
       </b-col>
-      <b-col sm="6" lg="3" class="p-1">
+      <b-col
+        sm="6"
+        lg="3"
+        class="p-1"
+      >
         <b-card class="text-white bg-danger card heat">
-          <div class="h4 m-0">Heat </div>
-          <b-progress height={} class=" progress-xs my-3" variant="danger" animated v-bind:value="heat" />
+          <div class="h4 m-0">Heat <span>Last week: {{ totalHeat }}</span> </div>
+          <b-progress
+            height={}
+            class=" progress-xs my-3"
+            variant="danger"
+            animated
+            v-bind:value="heat"
+          />
         </b-card>
       </b-col>
-      <b-col sm="6" lg="3" class="p-1">
+      <b-col
+        sm="6"
+        lg="3"
+        class="p-1"
+      >
         <b-card class="text-white bg-success card costs">
-          <div class="h4 m-0">Total costs</div>
-          <b-progress height={} class="progress-xs my-3" variant="success" animated  v-bind:value="costs" />
+          <div class="h4 m-0">Total costs <span>{{ totalCosts }} </span></div>
+          <b-progress
+            height={}
+            class="progress-xs my-3"
+            variant="success"
+            animated
+            v-bind:value="costs"
+          />
         </b-card>
       </b-col>
     </b-row>
@@ -30,22 +70,62 @@
 </template>
 
 <script>
+import axios from "axios";
+
+const URL = process.env.VUE_APP_NODE_SERVER_URL + "/business/data";
+
 export default {
   name: "widgets",
-
   data() {
     return {
-      water: 33,
-      power: 10,
-      heat: 66,
-      costs: 88
+      totalWater: "",
+      totalPower: "",
+      totalHeat: "",
+      totalCosts: "",
+      water: 0,
+      power: 0,
+      heat: 0,
+      costs: 0
     };
+  },
+  mounted() {
+    axios
+      .get(URL)
+      .then(result => {
+        let {
+          water: waterConsumption,
+          power: powerConsumption,
+          heat,
+          costs
+        } = result.data;
+
+        this.water = waterConsumption / 1300;
+        this.totalWater = `${(waterConsumption / 100).toPrecision(5)} hl`;
+
+        this.totalPower = `${(powerConsumption / 1000).toPrecision(5)} Kwh`;
+        this.power = powerConsumption / 1000000;
+
+        this.totalHeat = `${heat.toPrecision(4)} ℃`;
+        this.heat = heat;
+
+        //TODO Fix costs value 
+        this.totalCosts = `${(costs / 1000000).toPrecision(5)} mln. zl`;
+        this.costs = costs / 10000000;
+      })
+      .catch(err => {
+        this.$toasted.show("Error occured :( !", {
+          theme: "toasted-primary",
+          position: "bottom-center",
+          duration: 1500,
+          type: "error",
+          icon: "error_outline"
+        });
+      });
   }
 };
 </script>
 
 <style lang="scss" scoped>
-
 .card {
   background-repeat: no-repeat;
   background-position: top right;
@@ -65,6 +145,10 @@ export default {
 
   &.costs {
     background-image: url("../assets/img/costs.svg");
+  }
+
+  span {
+    font-size: 13px;
   }
 }
 </style>
