@@ -14,7 +14,6 @@
 
         <div class="col-md-6 card small">
           <Linechart class="pointer" v-b-modal.modal-linechart v-bind:chart-data="datacollection"></Linechart>
-          <button class="pointer" v-on:click="fillData()">Randomize</button>
           
           <!-- Modal view only -->
           <b-modal id="modal-linechart" centered hide-footer size="md">
@@ -38,70 +37,6 @@ export default {
     Barchart,
     Linechart
   },
-  data() {
-    return {
-      datacollection: null
-    };
-  },
-  mounted() {
-    this.fillData();
-  },
-  methods: {
-    fillData() {
-      this.datacollection = {
-        labels: [
-          this.getRandomInt(),
-          this.getRandomInt(),
-          this.getRandomInt(),
-          this.getRandomInt(),
-          this.getRandomInt(),
-          this.getRandomInt(),
-          this.getRandomInt(),
-          this.getRandomInt()
-        ],
-        datasets: [
-          {
-            label: "Data One",
-            borderColor: "red",
-            type: "line",
-            backgroundColor: "rgba(246, 74, 72, 0.7)",
-            borderWidth: 2,
-            data: [
-              this.getRandomInt(),
-              this.getRandomInt(),
-              this.getRandomInt(),
-              this.getRandomInt(),
-              this.getRandomInt(),
-              this.getRandomInt(),
-              this.getRandomInt(),
-              this.getRandomInt(),
-              this.getRandomInt()
-            ]
-          },
-          {
-            label: "Data Two",
-            borderColor: "green",
-            backgroundColor: "rgba(68, 158, 72, 0.7)",
-            borderWidth: 2,
-            data: [
-              this.getRandomInt(),
-              this.getRandomInt(),
-              this.getRandomInt(),
-              this.getRandomInt(),
-              this.getRandomInt(),
-              this.getRandomInt(),
-              this.getRandomInt(),
-              this.getRandomInt(),
-              this.getRandomInt()
-            ]
-          }
-        ]
-      };
-    },
-    getRandomInt() {
-      return Math.floor(Math.random() * (50 - 5 + 1)) + 5;
-    }
-  }
 };
 </script>
 

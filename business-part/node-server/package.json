@@ -23,7 +23,6 @@
   "author": "Tomasz Bieniek Krzyżak Paweł",
   "license": "MIT",
   "dependencies": {
-    "dns": "^0.2.2",
     "express": "^4.16.4",
     "moment": "^2.22.2",
     "morgan": "^1.9.1",

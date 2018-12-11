@@ -85,7 +85,7 @@ export default {
       water: 0,
       power: 0,
       heat: 0,
-      costs: 0
+      costs: 25
     };
   },
   mounted() {
@@ -96,24 +96,22 @@ export default {
           water: waterConsumption,
           power: powerConsumption,
           heat,
-          costs
+          costs: moneyCosts
         } = result.data;
 
         this.water = waterConsumption / 1300;
         this.totalWater = `${(waterConsumption / 100).toPrecision(5)} hl`;
 
         this.totalPower = `${(powerConsumption / 1000).toPrecision(5)} Kwh`;
-        this.power = powerConsumption / 1000000;
+        this.power = powerConsumption / 10080;
 
         this.totalHeat = `${heat.toPrecision(4)} ℃`;
         this.heat = heat;
 
-        //TODO Fix costs value 
-        this.totalCosts = `${(costs / 1000000).toPrecision(5)} mln. zl`;
-        this.costs = costs / 10000000;
+        this.totalCosts = `${(moneyCosts / 1000).toPrecision(5)} tys. zl`;
       })
       .catch(err => {
-        this.$toasted.show("Error occured :( !", {
+        this.$toasted.show("Error occured: " + err, {
           theme: "toasted-primary",
           position: "bottom-center",
           duration: 1500,
