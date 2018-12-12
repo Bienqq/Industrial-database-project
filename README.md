@@ -1,4 +1,4 @@
-# Running Industrial-database-app
+# Running industrial-database-app
 
 ### Install dependencies for node-server-app and vue-client-app by using :
 
