@@ -20,7 +20,7 @@ npm run build
 
 ## Running node-server-app module
 
-## Running node-server-app in development mode with nodemon
+### Running node-server-app in development mode with nodemon
 
 ```
 npm run dev
