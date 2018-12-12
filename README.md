@@ -26,6 +26,11 @@ npm run build
 npm run dev
 ```
 
+# Examples
+![alt text](https://github.com/Bienqq/industrial-database-app/blob/master/images/1.png "Logo Title Text 1")
+![alt text](https://github.com/Bienqq/industrial-database-app/blob/master/images/2.png "Logo Title Text 1")
+![alt text](https://github.com/Bienqq/industrial-database-app/blob/master/images/3.png "Logo Title Text 1")
+
 # Authors
 
 - Krzyżak Pawel  **industrial-module**
