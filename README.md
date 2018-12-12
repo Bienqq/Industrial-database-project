@@ -6,7 +6,7 @@
 npm install
 ```
 
-### Running vue-client-app development dev mode
+### Running vue-client-app development mode
 
 ```
 npm run serve
@@ -37,8 +37,8 @@ npm run dev
 
 # Authors
 
-- Krzyżak Pawel  **industrial-module**
-- Tomasz Bieniek **business-module**
+- Krzyżak Pawel  (industrial-module)
+- Tomasz Bieniek (business-module)
 
 # Licence
 MIT 
