@@ -20,7 +20,7 @@ npm run serve
 npm run build
 ```
 
-# Running node-server-app module
+## Running node-server-app module
 
 ## Running ** node-server-app ** in development mode with nodemon
 
@@ -30,8 +30,8 @@ npm run dev
 
 # Authors
 
-- -- Krzyżak Pawel industrial-app-module --
-- -- Tomasz Bieniek business-app-module --
+- Krzyżak Pawel 
+- Tomasz Bieniek 
 
 # Licence
 MIT 
