@@ -28,8 +28,8 @@ npm run dev
 
 # Authors
 
-- Krzyżak Pawel  industrial-module
-- Tomasz Bieniek business-module 
+- Krzyżak Pawel  **industrial-module**
+- Tomasz Bieniek **business-module**
 
 # Licence
 MIT 
