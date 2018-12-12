@@ -111,7 +111,7 @@ export default {
         this.totalCosts = `${(moneyCosts / 1000).toPrecision(5)} tys. zl`;
       })
       .catch(err => {
-        this.$toasted.show("Error occured: " + err, {
+        this.$toasted.show(err, {
           theme: "toasted-primary",
           position: "bottom-center",
           duration: 1500,

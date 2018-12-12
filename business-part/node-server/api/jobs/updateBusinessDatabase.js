@@ -1,6 +1,8 @@
 const businessModel = require("../models/businessData")
 const industrialModel = require("../models/industrialData")
 const db = require("../database/industrialDatabase")
+const Op = require("sequelize").Op
+
 
 const INDSUTRIAL_DB_SEQ_NAME = process.env.INDSUTRIAL_DB_SEQ_NAME
 const STARTING_SEQ_NAME = process.env.STARTING_SEQ_NAME
@@ -47,6 +49,7 @@ async function getBusinessResults(uniqueElements, result) {
 }
 
 async function updateBusinessDatabase() {
+
     const lastId = await db.query(`SELECT last_value FROM ${INDSUTRIAL_DB_SEQ_NAME}`, {
         type: db.QueryTypes.SELECT
     })
@@ -62,8 +65,8 @@ async function updateBusinessDatabase() {
     const result = await industrialModel.findAll({
         where: {
             id: {
-                gte: startId,
-                lte: endId
+                [Op.gte]: startId,
+                [Op.lte]: endId
             },
         }
     })

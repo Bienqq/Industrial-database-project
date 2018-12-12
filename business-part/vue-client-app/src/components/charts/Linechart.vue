@@ -53,7 +53,7 @@ export default {
         this.renderChart(this.datacollection);
       })
       .catch(err => {
-        this.$toasted.show("Error occured: " + err, {
+        this.$toasted.show(err, {
           theme: "toasted-primary",
           position: "bottom-center",
           duration: 1500,

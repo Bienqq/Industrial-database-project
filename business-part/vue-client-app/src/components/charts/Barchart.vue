@@ -45,7 +45,7 @@ export default {
         });
       })
       .catch(error => {
-        this.$toasted.show("Error occured: " + error, {
+        this.$toasted.show(error, {
           theme: "toasted-primary",
           position: "bottom-center",
           duration: 1500,

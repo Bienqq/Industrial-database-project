@@ -1,6 +1,7 @@
 const express = require("express")
 const router = express.Router()
 const moment = require("moment")
+const Op = require("sequelize").Op
 
 const dataModel = require("../models/businessData")
 
@@ -12,7 +13,7 @@ async function getData() {
     return dataModel.findAll({
         where: {
             date: {
-                $lte: moment().subtract(7, 'days').toDate()
+                [Op.lte]: moment().subtract(7, 'days').toDate()
             }
         }
     })
