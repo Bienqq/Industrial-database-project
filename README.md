@@ -1,7 +1,5 @@
 # Running Industrial-database-app
 
-## Project setup
-
 ### Install dependencies for ** node-server-app ** and ** vue-client-app ** by using :
 
 ```
