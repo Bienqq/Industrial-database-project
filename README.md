@@ -1,12 +1,12 @@
 # Running Industrial-database-app
 
-### Install dependencies for ** node-server-app ** and ** vue-client-app ** by using :
+### Install dependencies for node-server-app and vue-client-app by using :
 
 ```
 npm install
 ```
 
-### Running ** vue-client-app ** in dev mode
+### Running vue-client-app development dev mode
 
 ```
 npm run serve
@@ -20,7 +20,7 @@ npm run build
 
 ## Running node-server-app module
 
-## Running ** node-server-app ** in development mode with nodemon
+## Running node-server-app in development mode with nodemon
 
 ```
 npm run dev
@@ -28,8 +28,8 @@ npm run dev
 
 # Authors
 
-- Krzyżak Pawel 
-- Tomasz Bieniek 
+- Krzyżak Pawel  industrial-module
+- Tomasz Bieniek business-module 
 
 # Licence
 MIT 
