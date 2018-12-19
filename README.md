@@ -27,11 +27,14 @@ npm run dev
 ```
 
 # Examples
+LabVIEW symulator : 
+![alt text](https://github.com/Bienqq/industrial-database-app/blob/master/images/4.png)
+
+
+Business administrator panel : 
 ![alt text](https://github.com/Bienqq/industrial-database-app/blob/master/images/1.png)
 
-
 ![alt text](https://github.com/Bienqq/industrial-database-app/blob/master/images/2.png)
-
 
 ![alt text](https://github.com/Bienqq/industrial-database-app/blob/master/images/3.png)
 
