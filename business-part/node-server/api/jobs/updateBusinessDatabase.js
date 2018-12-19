@@ -34,9 +34,11 @@ async function getBusinessResults(uniqueElements, result) {
         t2we /= filtered.length
         v1 /= filtered.length
         v2 /= filtered.length
-
+        
+            
+        const dateString = filtered[0].date.substring(0,10).split(".").reverse().join("-")
         businessResults.push(businessModel.build({
-            date: filtered[0].date.substring(0, 10),
+            date: new Date(dateString),
             t1wy: t1wy,
             t2wy: t2wy,
             t1we: t1we,
@@ -84,7 +86,7 @@ async function updateBusinessDatabase() {
 
     db.query(`SELECT setval('${STARTING_SEQ_NAME}', ${endId + 1})`, {
         type: db.QueryTypes.SELECT
-    }).then(() => console.log("\n------------------------\nNext starting ID will be : " + endId + 1 + "\n------------------------\n"))
+    }).then(() => console.log("\n------------------------\nNext starting ID will be : " + (endId + 1) + "\n------------------------\n"))
 }
 
 module.exports = updateBusinessDatabase

@@ -14,21 +14,21 @@ export default {
       .get(URL)
       .then(result => {
         const { water, heat } = result.data;
-        
-        for(let i = 0 ; i < water.length ; i++){
-          water[i] = ( water[i] / 100 ).toPrecision(4)
-          heat[i] = ( heat[i] / 1000 ).toPrecision(4)
+
+        for (let i = 0; i < water.length; i++) {
+          water[i] = (water[i] / 100).toPrecision(4);
+          heat[i] = (heat[i] / 1000).toPrecision(4);
         }
 
         this.renderChart({
           labels: [
-            "7 days ago",
             "6 days ago",
             "5 days ago",
             "4 days ago",
             "3 days ago",
             "2 days ago",
-            "1 day ago"
+            "yesterday",
+            "today"
           ],
           datasets: [
             {

@@ -10,9 +10,9 @@
         "INDUSTRIAL_DB_SCHEMA_NAME": "mydb",
         "INDSUTRIAL_DB_SEQ_NAME":"dane_id_seq",
         "STARTING_SEQ_NAME": "starting_sequence",
-        "UPDATE_PERIOD_SECONDS":"5",
-        "POWER_C1": 20,
-        "COSTS_C2": 0.00482,
-        "COSTS_C3": 0.053
+        "UPDATE_PERIOD_SECONDS":"10",
+        "POWER_C1": 1,
+        "COSTS_C2": 0.000082,
+        "COSTS_C3": 0.000053
     }
 }

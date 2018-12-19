@@ -9,20 +9,22 @@ export default {
   extends: Line,
   data() {
     return {
-      datacollection: null
+      datacollection: null,
+      t1out: 0,
+      t2out: 0
     };
   },
   methods: {
-    fillData(t1out, t2out) {
+    fillData() {
       this.datacollection = {
         labels: [
-          "7 days ago",
           "6 days ago",
           "5 days ago",
           "4 days ago",
           "3 days ago",
           "2 days ago",
-          "1 day ago"
+          "yesterday",
+          "today"
         ],
         datasets: [
           {
@@ -31,14 +33,14 @@ export default {
             type: "line",
             backgroundColor: "rgba(246, 74, 72, 0.7)",
             borderWidth: 2,
-            data: t1out
+            data: this.t1out
           },
           {
             label: "T2out [℃] ",
             borderColor: "brown",
             backgroundColor: "rgba(180, 44, 44, 0.6)",
             borderWidth: 2,
-            data: t2out
+            data: this.t2out
           }
         ]
       };
@@ -49,7 +51,9 @@ export default {
       .get(URL)
       .then(response => {
         const { t1out, t2out } = response.data;
-        this.fillData(t1out, t2out);
+        this.t1out = t1out
+        this.t2out = t2out
+        this.fillData();
         this.renderChart(this.datacollection);
       })
       .catch(err => {
