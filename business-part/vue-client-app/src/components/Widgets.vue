@@ -103,7 +103,7 @@ export default {
         this.totalWater = `${(waterConsumption / 100).toPrecision(5)} hl`;
 
         this.totalPower = `${(powerConsumption / 1000).toPrecision(5)} Kwh`;
-        this.power = powerConsumption / 20000000;
+        this.power = 20;
 
         this.totalHeat = `${heat.toPrecision(4)} ℃`;
         this.heat = heat;

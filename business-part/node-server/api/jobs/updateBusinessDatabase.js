@@ -34,11 +34,14 @@ async function getBusinessResults(uniqueElements, result) {
         t2we /= filtered.length
         v1 /= filtered.length
         v2 /= filtered.length
-        
-            
-        const dateString = filtered[0].date.substring(0,10).split(".").reverse().join("-")
+
+        const date = filtered[0].date
+        const day = parseInt(date.substring(0, 2))
+        const month = parseInt(date.substring(3, 5))
+        const year = parseInt(date.substring(6, 10))
+
         businessResults.push(businessModel.build({
-            date: new Date(dateString),
+            date: new Date(year, month - 1, day + 1),
             t1wy: t1wy,
             t2wy: t2wy,
             t1we: t1we,
