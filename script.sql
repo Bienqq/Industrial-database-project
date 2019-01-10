@@ -1,0 +1,10 @@
+DELETE FROM dane Where id > 71981;
+UPDATE dane SET date =  (SELECT to_char((SELECT NOW() - INTERVAL '6 DAY'), 'DD/MM/YYYY HH:MM:SS')) WHERE id between 1 and 10384 ;
+UPDATE dane SET date =  (SELECT to_char((SELECT NOW() - INTERVAL '5 DAY'), 'DD/MM/YYYY HH:MM:SS')) WHERE id between 10384 and 20566 ;
+UPDATE dane SET date =  (SELECT to_char((SELECT NOW() - INTERVAL '4 DAY'), 'DD/MM/YYYY HH:MM:SS')) WHERE id between 20566 and 30849 ;
+UPDATE dane SET date =  (SELECT to_char((SELECT NOW() - INTERVAL '3 DAY'), 'DD/MM/YYYY HH:MM:SS')) WHERE id between 30849 and 41132 ;
+UPDATE dane SET date =  (SELECT to_char((SELECT NOW() - INTERVAL '2 DAY'), 'DD/MM/YYYY HH:MM:SS')) WHERE id between 41132 and 51415 ;
+UPDATE dane SET date =  (SELECT to_char((SELECT NOW() - INTERVAL '1 DAY'), 'DD/MM/YYYY HH:MM:SS')) WHERE id between 51415 and 61698 ;
+UPDATE dane SET date =  (SELECT to_char((SELECT NOW()), 'DD/MM/YYYY HH:MM:SS')) WHERE id between 61698 and 71981 ;
+SELECT setval('starting_sequence', 1, true);
+SELECT setval('dane_id_seq', 71981, true);
